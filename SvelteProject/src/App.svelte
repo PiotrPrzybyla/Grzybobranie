@@ -2,7 +2,7 @@
 	 import Nav from "./Components/Nav.svelte";
 import Ratol from "./Components/Ratol.svelte";
 import Poszkodowany from "./Components/Poszkodowany.svelte"
-	 let activeSite = "main";
+	 let activeSite = "poszkodowany";
 	 function showRatolSite(){
 		activeSite = "ratol";
 	 }
