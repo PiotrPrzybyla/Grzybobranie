@@ -26,5 +26,6 @@ import BurgerMenu from 'svelte-burger-menu';
         text-transform: uppercase;
         letter-spacing: 1px;
         list-style: none;
+        cursor: progress;
     }
 </style>

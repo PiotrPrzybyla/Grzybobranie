@@ -25,5 +25,7 @@ ul{
     }
 li{
         font-size: 30px;
+        font-weight: 600;
+        color: #eee;
     }
 </style>

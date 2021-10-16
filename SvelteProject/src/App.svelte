@@ -2,7 +2,8 @@
 	 import Nav from "./Components/Nav.svelte";
 import Ratol from "./Components/Ratol.svelte";
 import Poszkodowany from "./Components/Poszkodowany.svelte"
-	 let activeSite = "poszkodowany";
+import Footer from "./Components/Footer.svelte"
+	 let activeSite = "main";
 	 function showRatolSite(){
 		activeSite = "ratol";
 	 }
@@ -32,6 +33,7 @@ import Poszkodowany from "./Components/Poszkodowany.svelte"
 <Poszkodowany/>
 {/if}
 
+<Footer/>
 
 
 
@@ -63,7 +65,7 @@ import Poszkodowany from "./Components/Poszkodowany.svelte"
 	}
 	section{
 		width: 100%;
-		height: 100vh;
+		height: 90vh;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -86,17 +88,28 @@ import Poszkodowany from "./Components/Poszkodowany.svelte"
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
+		transition: .4s;
+		
 	}
+	
 	div.ratol{
 
 		background-image: url('https://cdn.pixabay.com/photo/2016/09/16/19/12/ambulance-1674877_960_720.png');
 		background-position: center;
-		background-size: cover;
+		background-size: 100%;
+		
 	}
 	div.pacjent{
 		background-image: url('https://cdn.pixabay.com/photo/2016/09/16/19/15/drug-1674890_960_720.png');
 		background-position: center;
-		background-size: cover;
+		background-size: 100%;
 	}
+	div:hover{
+		background-size: 115%;
+		font-size: 1.1em;
+
+		
+	}
+
 	
 </style>

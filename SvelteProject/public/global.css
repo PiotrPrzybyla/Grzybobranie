@@ -15,7 +15,8 @@ body {
 	box-sizing: border-box;
 	font-family: Roboto Condensed, Oxygen-Sans, Ubuntu, Cantarell,
 		"Helvetica Neue", sans-serif;
-	background-color: #dffcfb;
+	/* background-color: #eeeeff; */
+	background-color: #fff;
 }
 
 a {

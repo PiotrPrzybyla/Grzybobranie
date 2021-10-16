@@ -9,11 +9,15 @@
 <Dane/>
 <div class="pannels">
     <div class="promien pannel">
-        Powiadom mnie gdy poszkodowany będzie w odległości: 
-        <input type="number" bind:value={radius}> m
-    </div>
-    <div class="powiadomienia pannel"> Powiadomienia:
         <ul>
+            <li><h2> Powiadom mnie gdy poszkodowany <br> będzie w odległości:</h2></li>
+        
+        <input type="number" bind:value={radius}> m
+    </ul>
+    </div>
+    <div class="powiadomienia pannel"> 
+        <ul>
+           <li> <h2> Powiadomienia: </h2></li>
             <li>
                 <label for="mail">Powiadom mnie mailowo</label>
                 <input name="mail" type="checkbox">
@@ -31,7 +35,7 @@
             </li>
         </ul>
     </div>
-    <div class="iloscAkcji pannel"> Ilość wykonanych akcji: <p>{iloscAkcji}</p>
+    <div class="iloscAkcji pannel"><ul> <li><h2>Ilość wykonanych akcji:</h2></li>    <p>{iloscAkcji}</p></ul>
     </div>
     
 
@@ -59,6 +63,11 @@
     }
     ul{
         list-style: none;
+        text-align: left;
+        border: 2px solid #7cc1be;
+        border-radius: 20px;
+        background-color: rgba(141,210,207,.3);
+        height: 45vh;
     }
    
 </style>
