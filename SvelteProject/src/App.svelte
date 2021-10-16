@@ -1,17 +1,36 @@
 <script>
 	 import Nav from "./Components/Nav.svelte";
+import Ratol from "./Components/Ratol.svelte";
+import Poszkodowany from "./Components/Poszkodowany.svelte"
+	 let activeSite = "main";
+	 function showRatolSite(){
+		activeSite = "ratol";
+	 }
+	 function backToMenu(){
+		activeSite = "main"
+	 }
+	 function showPoszkodowanySite(){
+		 activeSite = "poszkodowany"
+	 }
 </script>
 
 <Nav/>
-
+{#if activeSite == "main"}
 <section class="pannels">
-<div class="ratol">
+<div class="ratol" on:click={showRatolSite}>
 	<h1>Panel Ratownika</h1>
 </div>
-<div class="pacjent">
+<div class="pacjent" on:click={showPoszkodowanySite}>
 	<h1>Panel Poszkodowanego</h1>
 </div>
 </section>
+{:else if activeSite == "ratol"}
+<h2 on:click={backToMenu}>Powrót</h2>
+<Ratol/>
+{:else if activeSite == "poszkodowany"}
+<h2 on:click={backToMenu}>Powrót</h2>
+<Poszkodowany/>
+{/if}
 
 
 
@@ -32,6 +51,15 @@
 		line-height: 150%;
 		/* padding: 10px; */
 
+	}
+	h2{
+		/* text-align: right; */
+		display: block;
+		cursor: pointer;
+		padding: 10px;
+		position: absolute ;
+		right: 0;
+		top: 0;
 	}
 	section{
 		width: 100%;
